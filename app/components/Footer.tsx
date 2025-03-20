@@ -52,7 +52,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="ml-[-50px] ml-[-400px]">
+          <div className=" ml-[-150px]">
             {" "}
             <h3 className="text-[28px] font-[300] mb-1 uppercase">Support</h3>
             <ul className="space-y-1">
