@@ -1,5 +1,4 @@
-"use client";
-
+"use client"; 
 import { processStepsData } from "../data/processStepsData";
 import {
   Accordion,
@@ -17,39 +16,59 @@ export function ProcessAccordion() {
   };
 
   return (
-    <section className="py-12 bg-gray-50 container mx-auto px-6">
-      <h2 className="inline-block bg-[#7d7c38] text-white text-3xl font-bold rounded-[20px] px-4 py-2 text-start mb-6">
+    <section className="py-2 bg-white container mx-auto px-2">
+      <h2 className="bg-[#7E8038] font-space-grotesk text-black text-4xl  font-bold rounded-lg px-7 py-2 uppercase mb-12 ml-[8.2rem] tracking-wide w-[188px] h-[51px] flex items-center justify-center">
         PROCESS
       </h2>
-      <div className="max-w-2xl mx-auto space-y-4">
-        <Accordion type="single" collapsible className="w-full">
-          {processStepsData.map((step) => (
-            <AccordionItem
-              key={step.id}
-              value={`item-${step.id}`}
-              className="rounded-lg overflow-hidden shadow-lg mb-4"
-            >
-              <AccordionTrigger
-                className="flex items-center justify-between bg-[#7d7c38] text-white px-6 py-4 text-lg font-semibold rounded-t-md hover:bg-[#616161] transition relative"
-                onClick={() => handleToggle(`item-${step.id}`)}
+
+      <div className="w-[1234px] mx-auto">
+        <Accordion type="single" collapsible className="w-full space-y-10">
+          {processStepsData.map((step) => {
+            const isOpen = openItem === `item-${step.id}`;
+
+            return (
+              <AccordionItem
+                key={step.id}
+                value={`item-${step.id}`}
+                className={`rounded-3xl overflow-hidden border border-black mb-4 transition-all duration-300 ${
+                  isOpen ? "bg-white" : "bg-[#7E8038]"
+                }`}
+                style={{
+                  width: "1234px",
+                  height: isOpen ? "275px" : "155px",
+                }}
               >
-                <div className="flex items-center w-full">
-                  <span className="mr-4 bg-white text-green-700 font-bold px-3 py-1 rounded-full">
-                    {step.id}
-                  </span>
-                  <span className="flex-1">{step.title}</span>
-                </div>
+                <AccordionTrigger
+                  className={`flex items-center justify-between px-4 py-2 text-2xl font-semibold relative transition-colors duration-300 ${
+                    isOpen ? "bg-white text-black" : "bg-[#7E8038] text-black"
+                  } hover:no-underline focus:no-underline`}
+                  onClick={() => handleToggle(`item-${step.id}`)}
+                >
+                  <div className="flex items-center w-full">
+                    <span className="mr-3 text-[60px] font-inter font-medium text-black px-12 py-3 rounded-md leading-[121%] tracking-[0]">
+                      {String(step.id).padStart(2, "0")}
+                    </span>
+                    <span className="flex-1 text-[30px] font-inter font-medium py-10 leading-[121%]">
+                      {step.title}
+                    </span>
+                  </div>
+                  <div className="w-[58px] h-[58px] flex items-center justify-center rounded-full bg-white text-black font-bold text-5xl cursor-pointer border-[1px] border-black relative">
+                    <span>{isOpen ? "-" : "+"}</span>
+                  </div>
+                </AccordionTrigger>
 
-                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-black font-bold text-2xl cursor-pointer">
-                  <span>{openItem === `item-${step.id}` ? "-" : "+"}</span>
-                </div>
-              </AccordionTrigger>
-
-              <AccordionContent className="px-6 py-4 bg-white text-black rounded-b-md">
-                {step.description}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
+                <AccordionContent
+                  className={`text-black text-lg leading-relaxed transition-all duration-300 ${
+                    isOpen
+                      ? "bg-white border-t-2 border-black mt-3 w-[90%] mx-auto px-[7px] py-[20px]" 
+                      : "border-t border-gray-300"
+                  }`}
+                >
+                  <div className="w-full">{step.description}</div>
+                </AccordionContent>
+              </AccordionItem>
+            );
+          })}
         </Accordion>
       </div>
     </section>

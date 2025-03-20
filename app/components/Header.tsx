@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <header className="bg-white text-gray-600 py-4 shadow-md relative z-50">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold">
+        <Link href="/" className="text-xl font-bold ml-[10rem]">
           Weyra Tech
         </Link>
         
