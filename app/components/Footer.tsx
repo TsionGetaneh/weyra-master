@@ -6,14 +6,14 @@ export default function Footer() {
   return (
     <footer className="bg-[#7d7c38] text-white py-3 text-[20px] font-[400]">
       <div className="container mx-auto px-2 md:px-6">
-        <div className="ml-[8.2rem] grid grid-cols-1 md:grid-cols-2 gap-2">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-1 pl-[130px]">
+          <div className="pl-[20px]">
             <h3 className="text-[28px] font-[300] mb-1 uppercase">Company</h3>
             <ul className="space-y-1">
               <li>
                 <Link
                   href="/"
-                  className="hover:text-gray-200  text-sm transition-all duration-300"
+                  className="hover:text-gray-200 text-sm transition-all duration-300"
                 >
                   Home
                 </Link>
@@ -37,7 +37,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#blog"
-                  className="hover:text-gray-200 text-sm  transition-all duration-300"
+                  className="hover:text-gray-200 text-sm transition-all duration-300"
                 >
                   Blog
                 </Link>
@@ -52,15 +52,14 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-[28px] font-[300] mb-1 uppercase ml-[-23rem]">
-              Support
-            </h3>
+          <div className="ml-[-50px] ml-[-400px]">
+            {" "}
+            <h3 className="text-[28px] font-[300] mb-1 uppercase">Support</h3>
             <ul className="space-y-1">
               <li>
                 <Link
                   href="/help"
-                  className="hover:text-gray-200 ml-[-23rem] text-sm transition-all duration-300"
+                  className="hover:text-gray-200 text-[14px] transition-all duration-300"
                 >
                   Help Center
                 </Link>
@@ -68,7 +67,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/terms"
-                  className="hover:text-gray-200 ml-[-23rem] text-sm transition-all duration-300"
+                  className="hover:text-gray-200 text-sm transition-all duration-300"
                 >
                   Terms of Service
                 </Link>
@@ -76,7 +75,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/legal"
-                  className="hover:text-gray-200 ml-[-23rem] text-sm transition-all duration-300"
+                  className="hover:text-gray-200 text-sm transition-all duration-300"
                 >
                   Legal
                 </Link>
@@ -84,7 +83,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/privacy-policy"
-                  className="hover:text-gray-200 ml-[-23rem] text-[14px] transition-all duration-300"
+                  className="hover:text-gray-200 text-[14px] transition-all duration-300"
                 >
                   Privacy Policy
                 </Link>
@@ -92,7 +91,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/status"
-                  className="hover:text-gray-200 ml-[-23rem] text-sm transition-all duration-300"
+                  className="hover:text-gray-200 text-sm transition-all duration-300"
                 >
                   Status
                 </Link>

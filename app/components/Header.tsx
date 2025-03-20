@@ -17,9 +17,9 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white text-gray-600 py-4 shadow-md relative z-50">
+    <header className="fixed top-0 left-0 w-full bg-white text-gray-600 py-4 shadow-md z-50">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold ml-[10rem]">
+        <Link href="/" className="text-xl font-bold ml-[8.2rem]">
           Weyra Tech
         </Link>
         
